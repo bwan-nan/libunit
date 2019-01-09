@@ -19,3 +19,7 @@ How to use:
     git clone https://github.com/bwan-nan/libunit.git
     Go to the tests folder and run "make test" to see what kind of tests the framework does
     Go to the real-tests folder and run "make test" to actually see the tests on working and non-working functions.
+    
+## Further informations
+
+> Please read the PDF.
