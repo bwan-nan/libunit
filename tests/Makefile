@@ -6,7 +6,7 @@
 #    By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/01 11:41:56 by bwan-nan          #+#    #+#              #
-#    Updated: 2018/12/02 23:17:22 by bwan-nan         ###   ########.fr        #
+#    Updated: 2019/01/09 15:20:02 by bwan-nan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,19 +22,26 @@ SRC = ./basic/00_launcher.c \
 	  ./basic/03_buserror_test.c \
 	  ./basic/04_segfault_test.c \
 
+LIBFT = -L ../framework/libft/ -lft
 FW_DIR = ../framework/
 FW = $(addprefix $(FW_DIR), libunit.a)
 
 all : $(NAME)
 
 $(NAME):
-	gcc $(FLAGS) $(SRC) $(FW) main.c -o $(NAME)
+	@make -C $(FW_DIR)
+	@gcc $(FLAGS) $(SRC) $(FW) $(LIBFT) main.c -o $(NAME)
+	@echo "\033[1;34mLib test\t\t\033[1;33mCompilation\t\033[0;32m[OK]\033[0m"
 
 clean:
-	/bin/rm -f *.o
+	@make clean -C $(FW_DIR)
+	@/bin/rm -f *.o
+	@echo "\033[1;34mLib test\t\t\033[1;33mCleaning obj\t\033[0;32m[OK]\033[0m"
 
 fclean: clean
-	/bin/rm -f $(NAME)
+	@make fclean -C $(FW_DIR)
+	@/bin/rm -f $(NAME)
+	@echo "\033[1;34mLib test\t\t\033[1;33mCleaning lib\t\033[0;32m[OK]\033[0m"
 
 re: fclean all
 

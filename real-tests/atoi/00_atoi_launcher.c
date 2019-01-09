@@ -6,7 +6,7 @@
 /*   By: bwan-nan <bwan-nan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/02 22:09:13 by bwan-nan          #+#    #+#             */
-/*   Updated: 2018/12/02 22:09:16 by bwan-nan         ###   ########.fr       */
+/*   Updated: 2019/01/09 15:32:19 by bwan-nan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int				atoi_test_launcher(void)
 	t_unit_test		*testlist;
 
 	testlist = NULL;
-	ft_putstr("ATOI :\n");
+	ft_putstr("\033[1;33mATOI :\033[0m\n");
 	load_test(&testlist, "Basic (+ number) test", &basic_positive_test);
 	load_test(&testlist, "Basic (- number) test", &basic_negative_test);
 	load_test(&testlist, "Zero test", &zero_test);
