@@ -12,7 +12,7 @@ We developped in 2 days a unit test Lib that is able to test the proper function
 
 <br />
 Due to a lack of time, we only did a few tests, and could not add the Continuous Integration module.<br />
-This project is therefore nothing but a proof of work.<br /> 
+This project is therefore nothing but a proof of work.<br /><br /> 
 
 How to use:
 
